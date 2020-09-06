@@ -453,7 +453,6 @@ libnavcoin_common_a_SOURCES = \
 # backward-compatibility objects and their sanity checks are linked.
 libnavcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES)
 libnavcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libnavcoin_util_a_LIBADD = $(SSL_LIBS)
 libnavcoin_util_a_SOURCES = \
   support/pagelocker.cpp \
   uint256.cpp \
