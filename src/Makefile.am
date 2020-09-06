@@ -582,9 +582,9 @@ if GLIBC_BACK_COMPAT
 endif
 
 libnavcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(BOOST_LIBS)
-libnavcoinconsensus_la_LIBADD = $(LIBSECP256K1) $(LIBBLS) 
+libnavcoinconsensus_la_LIBADD = $(LIBSECP256K1) $(LIBBLS) -lsodium
 libnavcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -I$(srcdir)/bls/src -I$(srcdir)/bls/build/_deps/chia-relic-build/include -I$(srcdir)/bls/build/_deps/chia-relic-src/include -DBUILD_NAVCOIN_INTERNAL -lsodium
-libnavcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -lsodium
+libnavcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
