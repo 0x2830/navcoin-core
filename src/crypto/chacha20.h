@@ -21,6 +21,7 @@ public:
     void SetKey(const unsigned char* key, size_t keylen); //!< set key with flexible keylength; 256bit recommended */
     void SetIV(uint64_t iv); // set the 64bit nonce
     void Seek(uint64_t pos); // set the 64bit block counter
+    void Output(uint8_t *output, size_t bytes);
 
     /** outputs the keystream of size <bytes> into <c> */
     void Keystream(unsigned char* c, size_t bytes);
